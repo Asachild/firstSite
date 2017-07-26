@@ -1,0 +1,304 @@
+
+
+#container{padding: 0;}
+
+/*------------------banner------------------------*/
+#banner{margin: 0 auto;width: 100%;height: 430px;position: relative;overflow: hidden;border-radius: 6px;}
+#banner #content{width: 700%;height:100%;position: absolute;left: -100%; transition:left 1s linear;}
+#banner #content img{width: 14.2857%;float: left;border-radius: 6px;}
+#banner span[id]{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	width: 40px;
+	height: 50px;
+	font:40px/50px '楷体';
+	text-align: center;
+	color: white;
+	background-color: #bbb;
+	opacity: .7;
+	filter:alpha(opacity=70);
+	z-index: 1;
+}
+#banner #banner_left{left:0;}
+#banner #banner_right{right:0;}
+#banner ul{position: absolute;bottom: 50px;left: 50%;transform:translateX(-50%);}
+#banner ul li{
+	cursor: pointer;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border:6px solid #ccc;
+	border-radius: 50%;
+	margin:0 5px;
+}
+#banner .active{border-color: #39AFE4;}
+/*page*/
+.clear{clear: both;}
+.main-page{
+	margin: 20px auto 0 auto;
+    width: 100%;
+    height: 600px;
+    background: url(../picture/wall13.jpg) no-repeat fixed center center;
+}
+.main-page .left{margin: 12% 3.5%;}
+.main-page .left, .main-page .right{float: left;}
+.main-page .nav-back{
+	width: 6%;
+    height: 300px;
+    background: #000;
+    opacity: .2;
+    filter: alpha(opacity=20);
+}
+.main-page .nav{
+    position: relative;
+    margin-top: -300px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #fff;
+}
+.main-page .nav div{
+	cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0;
+    position: relative;
+    display: block;
+}
+.main-page .nav div::after,.main-page .nav div::before{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;top: 0;
+	width: 100%;
+	height: 100%;
+	transform:scale(0);
+	transition:all .5s linear ;
+}
+.main-page .nav div::after{border-left: 1px solid #CF8C3B;border-right: 1px solid #CF8C3B;transform:scale(1,0);}
+.main-page .nav div::before{border-top: 1px solid #CF8C3B;border-bottom: 1px solid #CF8C3B;transform:scale(0,1);}
+.main-page .nav div.on::after,.main-page .nav div.on::before{transform:scale(1);}
+
+.main-page .right{
+    width: 86%;
+    height: 500px;
+}
+.main-page .right .content-back{
+    width: 96%;
+    height: 100%;
+    background: #fff;
+    opacity: .2;
+    filter:alpha(opacity=20);
+    margin-top: 50px;
+}
+.main-page .right .content{
+    position: relative;
+    width: 96%;
+    height: 100%;
+    margin-top: -500px;
+    overflow: hidden;
+    box-sizing:border-box;
+}
+.main-page .content .content-in{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    /*border:1px solid green;*/
+}
+
+/*scroll*/
+#scroll_left,#scroll_right{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	width: 20px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 35px;
+	color: rgba(109, 161, 208,.8);
+	z-index: 100;
+}
+#scroll_left{left: 0px;}
+#scroll_right{right: 0px;}
+
+.scroll{
+	width: 100%;
+	height: 280px;
+	margin: 100px auto;
+	overflow: hidden;
+	position: relative;
+	/*border:1px solid yellow;*/
+}
+.scroll .scroll_in{width: 300%;height:100%;position: absolute;left: 0;transition:left 1s linear;/*border:1px solid blue;*/}
+.scroll .scroll_in li{
+	float: left;
+	margin:0 .8%;
+	width:15%;
+	overflow: hidden;
+	position: relative;
+	/*border:1px solid red;*/
+}
+.scroll .scroll_in li img{width: 100%;}
+.scroll_in li::after,.scroll_in li::before{
+	display: block;
+	position: absolute;
+	left: 0;top: 0;
+	width: 100%;
+	height: 100%;
+}
+/*图片样式*/
+/*cur1*/
+.scroll .scroll_in li.cur1 img{transform:scale(1.1);transition:all .3s linear;}
+.scroll_in li.cur1::after{
+	content: "ONE PIECE";
+	text-align: center;
+	color: white;
+	font: 20px '微软雅黑';
+	padding-top: 30px;
+	transition:all .3s linear;
+}
+.scroll_in li.cur1::before{
+	content: '僕らのキラメキは沈まない太陽';
+	text-align: center;
+	color: white;
+	font: 16px '微软雅黑';
+	margin-top: 30px;
+	padding-top: 30px;
+	opacity: 0;
+	transition:all .3s linear;
+	z-index: 200;
+}
+.scroll_in li.cur1:hover img{transform:scale(1);}
+.scroll_in li.cur1:hover::after,.scroll_in li.cur1:hover::before{padding-top: 50px;opacity: 1;}
+
+/*cur2*/
+.scroll_in li.cur2::after{
+	content: "";
+	background-color: rgba(165, 103, 79,.7);
+	transform:translateX(-100%);
+	transition:all .3s linear;
+}
+.scroll_in li.cur2::before{
+	content: '行こう ひとかけらの勇気広げて';
+	text-align: center;
+	color: white;
+	font: 16px '微软雅黑';
+	opacity: 0;
+	margin-top: 160px;
+	transition:all .3s linear .3s;
+	z-index: 200;
+}
+.scroll_in li.cur2:hover::after,.scroll_in li.cur2:hover::before{transform:translateX(0);opacity: 1;}
+
+/*cur3*/
+.scroll .scroll_in li.cur3 img{transform:translateY(0);transition:all .3s linear;}
+.scroll_in li.cur3::after{
+	content: "ONE PIECE";
+	text-align: center;
+	color: white;
+	font: 20px '微软雅黑';
+	padding-top: 200px;
+	background-color: rgba(177, 153, 109,.5);
+	transition:all .3s linear;
+	z-index: -1;
+}
+.scroll_in li.cur3::before{
+	content: '未来へのシッポちょっと見えたよ';
+	text-align: center;
+	color: white;
+	font: 16px '微软雅黑';
+	margin-top: 30px;
+	padding-top: 180px;
+	opacity: 0;
+	transition:all .3s linear;
+	z-index: 200;
+}
+.scroll_in li.cur3:hover img{transform:translateY(-100%);}
+.scroll_in li.cur3:hover::after,.scroll_in li.cur3:hover::before{padding-top: 130px;opacity: 1;z-index: 200;}
+
+/*cur4*/
+.scroll .scroll_in li.cur4{perspective: 50em;}
+.scroll .scroll_in li.cur4 img{transform:rotateY(0deg);transform-origin: 0 50%;transition:all .3s ease;}
+.scroll_in li.cur4::after{
+	content: "";
+	background-color: rgba(191, 125, 65,.3);
+	transform:rotateY(-90deg);
+	transform-origin: 100% 50%;
+	transition:all .3s ease;
+}
+.scroll_in li.cur4::before{
+	content: '最初はみんなバラバラに描いていた地平線';
+	text-align: center;
+	color: white;
+	font: 16px '微软雅黑';
+	padding-top: 150px;
+	opacity: 0;
+	transition:all .3s ease;
+	z-index: 200;
+}
+.scroll_in li.cur4:hover img{transform:rotateY(90deg);}
+.scroll_in li.cur4:hover::after{transform:rotateY(0deg);}
+.scroll_in li.cur4:hover::before{opacity: 1;}
+
+/*cur5*/
+.scroll .scroll_in li.cur5{perspective: 50em;}
+.scroll .scroll_in li.cur5 img{transform:rotateY(0deg);backface-visibility: hidden;transition:all .3s ease;}
+.scroll_in li.cur5::after{
+	content: "";
+	background-color: rgba(191, 125, 65,.3);
+	transform:rotateY(-180deg);
+	transition:all .3s ease;
+	z-index: -1;
+}
+.scroll_in li.cur5::before{
+	content: '今なら一つの望遠鏡で覗ける';
+	text-align: center;
+	color: white;
+	font: 16px '微软雅黑';
+	padding-top: 150px;
+	opacity: 0;
+	transition:all .3s ease;
+	z-index: 200;
+}
+.scroll_in li.cur5:hover img{transform:rotateY(180deg);}
+.scroll_in li.cur5:hover::after{transform:rotateY(0deg);z-index: 10;}
+.scroll_in li.cur5:hover::before{opacity: 1;}
+
+/*cur6*/
+.scroll .scroll_in li.cur6{perspective: 50em;}
+.scroll_in li.cur6::after{
+	content: "君のココロ惑わす運命のしょっぱいコンパス";
+	text-align: center;
+	color: white;
+	font: 16px '微软雅黑';
+	padding-top: 150px;
+	background-color: rgba(191, 125, 65,.3);
+	transform:scale(1,0);
+	transition:all .3s ease;
+	opacity: 0;
+}
+.scroll_in li.cur6:hover::after{transform:scale(1,1);opacity: 1;}
+
+/*cur7*/
+.scroll .scroll_in li.cur7{perspective: 50em;backface-visibility: hidden;/*transform: translateZ(0);transition: all 0.35s ease*/}
+.scroll .scroll_in li.cur7 img{transform: scale(1);transition: all 0.35s ease;}
+.scroll_in li.cur7::after{
+	content: "君のココロ惑わす運命のしょっぱいコンパス";
+	text-align: center;
+	color: white;
+	font: 16px '微软雅黑';
+	padding-top: 150px;
+	background-color: rgba(191, 125, 65,.3);
+	transform: scale(0.5);
+	transform-origin:50% 50%;
+	transition:all .3s ease;
+	opacity: 0;
+}
+.scroll_in li.cur7:hover img{transform: scale(0.5);opacity: 0;}
+.scroll_in li.cur7:hover::after{transform:scale(1);opacity: 1;}

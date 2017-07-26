@@ -1,0 +1,16 @@
+
+.login{ padding: 40px 0;}
+form button{display: block;margin-left: 50%;transform:translateX(-50%);}
+form label{display: inline-block;font-size: 14px;}
+
+#sure{
+	-webkit-appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
+	width: 12px;height: 12px;
+	display: inline-block;
+}
+.login a{top:72%;}
+form span.name{top: 15%;left: 63%;}
+form span.pass{top: 35%;left: 63%;}
+form span.pass1{top: 55%;left: 63%;}

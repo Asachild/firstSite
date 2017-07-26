@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>今日头条</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="one piece,海贼王,航海王">
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/nav.css">
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script src="../js/jquery.js" type="text/javascript"></script>
+	<script src="../js/nav.js" type="text/javascript"></script>
+	<script src="../js/collect.js" type="text/javascript"></script>
+	<script src="../js/goTop.js" type="text/javascript"></script>
+	<script src="../js/index.js" type="text/javascript"></script>
+
+	<script>
+		window.onload = function(){
+			nav();//导航
+			show();//底部时间的显示
+			setInterval(show,1000);
+			collect();//侧边隐藏栏
+			goTop();//回到顶部
+			changeTab();//选项卡
+			startSign();//点击签到事件
+			sortSign();//签到排序方式
+		};
+	</script>
+</head>
+<body>
+	<!-- 第一条导航菜单 -->
+    <div id="in-nav">
+       <div class="container">
+        	<div class="container1">
+          	    <h4><strong>one piece</strong> 中文网</h4>
+	            <ul>
+	              <li><a class="sina" href="#"></a></li>
+	              <li><a class="qq" href="#"></a></li>
+	              <li><a href="enter.html">登录</a></li>
+	              <li><a href="login.html">注册</a></li>
+	            </ul>
+        	</div>
+        </div>
+    </div>
+    <!-- 第二条导航菜单 -->
+    <div id="in-sub-nav">
+        <div class="container">
+	        <div class="container1">
+	            <ul>
+		            <li><a href="index.html" class="active"><i class="batch home"></i><br />今日头条</a></li>
+		            <li><a href="wallpaper.html"><i class="batch picture"></i><br />每日壁纸</a></li>
+		            <li><a href="shop.html"><i class="batch shop"></i><br />草帽商城</a></li>
+		            <li><a href="about.html"><i class="batch about"></i><br />关于海贼</a></li>
+	            </ul>
+	        </div>
+        </div>
+    </div>
+    <!-- 底部导航 -->
+	<div id="box">
+		<a href="index.html"><img src="../images/1.png" width="64"><br />今日头条</a>
+		<a href="wallpaper.html"><img src="../images/2.png" width="64"><br />每日壁纸</a>
+		<a href="shop.html"><img src="../images/3.png" width="64"><br />草帽商城</a>
+		<a href="about.html"><img src="../images/4.png" width="64"><br />关于海贼</a>
+	</div>
+	<!-- 隐藏收藏栏 -->
+	<div id="collect">
+		<ul>
+			<li><a class="sina" href="#"></a></li>
+			<li><a class="qq" href="#"></a></li>
+		</ul>
+		<span id="hide"></span>
+	</div>
+	<!-- 回到顶部 -->
+	<p class="" id="go_top"><a href="javascript:scroll(0,0)">返回顶部</a></p>
+	<!-- 主要内容 -->
+	<div id="container" class="container">
+		<!-- 文字动画 -->
+		<div class="slider_letter">
+			<ul>
+				<li class="letter1">O</li>
+				<li class="letter2">N</li>
+				<li class="letter3">E</li>
+				<li class="letter4">P</li>
+				<li class="letter5">I</li>
+				<li class="letter6">E</li>
+				<li class="letter7">C</li>
+				<li class="letter8">E</li>
+			</ul>
+			<span></span><span></span>
+		</div>
+		<!-- 滑动图片 -->
+    	<div id="slider">
+    		<ul class="slider_img">
+    			<li>
+    				<p><a href="#">海贼王手办壁纸测评:<br>TIME:2015-02-11</a></p>
+    				<img src="../picture/wall1.jpg" alt="">
+    				<span></span>
+    			</li>
+    			<li>
+    				<p><a href="#">《BROTHERS》纪念萨博归来:<br>TIME:2014-07-17</a></p>
+    				<img src="../picture/wall2.jpg" alt="">
+    				<span></span>
+    			</li>
+    			<li>
+    				<p><a href="#">佩罗娜童年POP高清图:<br>TIME:2014-09-09</a></p>
+    				<img src="../picture/wall3.jpg" alt="">
+    				<span></span>
+    			</li>
+    			<li>
+    				<p><a href="#">STRONGWORLD系列手办:<br>TIME:2014-07-10</a></p>
+    				<img src="../picture/wall6.jpg" alt="">
+    				<span></span>
+    			</li>
+    			<li>
+    				<p><a href="#">海贼王海报 名场面大图:<br>TIME:2014-07-07</a></p>
+    				<img src="../picture/wall5.jpg" alt="">
+    				<span></span>
+    			</li>
+    		</ul>
+    	</div>
+    	<!-- 新闻部分 -->
+		<div class="news_left">
+			<h2>最新资讯<span>更多+</span></h2>
+			<ul>
+				<li><a href="#">2017日历预览图--娜美</a><span>海贼壁纸 | 2016-09-06</span></li>
+				<li><a href="#">第755话「卡鲁秋!草帽一伙重新团聚」</a><span>海贼壁纸 | 2016-09-04</span></li>
+				<li><a href="#">《航海王》官方国产手游《草帽船长》</a><span>海贼壁纸 | 2016-09-03</span></li>
+				<li><a href="#">海贼王 第838话 乔大哥</a><span>海贼壁纸 | 2016-09-01</span></li>
+				<li><a href="#">这个感觉有第三弹</a><span>海贼壁纸 | 2016-08-26</span></li>
+				<li><a href="#">海贼王 第837话 路飞VS将星克力架</a><span>海贼壁纸 | 2016-08-25</span></li>
+			</ul>
+		</div>
+		<!-- 摩天轮效果图片 -->
+		<div class="news_right">
+			<div class="conRotate">
+				<ul>
+					<li class="img1"><img src="../picture/avatar1.jpg" alt=""></li>
+					<li class="img2"><img src="../picture/avatar2.jpg" alt=""></li>
+					<li class="img3"><img src="../picture/avatar3.jpg" alt=""></li>
+					<li class="img4"><img src="../picture/avatar4.jpg" alt=""></li>
+					<li class="img5"><img src="../picture/avatar5.jpg" alt=""></li>
+					<li class="img6"><img src="../picture/avatar6.jpg" alt=""></li>
+					<li class="img7"><img src="../picture/avatar2.jpg" alt=""></li>
+					<li class="img8"><img src="../picture/avatar4.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+		<!-- 选项卡 -->
+		<div class="tab">
+			<ul id="tab">
+				<li class="cur">《ONE PIECE》</li>
+				<li>故事介绍</li>
+				<li>草帽海贼团</li>
+			</ul>
+			<div id="tab_common">
+				<div class="common init"> 
+					《ONE PIECE》（海贼王、航海王）简称“OP”，是日本漫画家尾田荣一郎作画的少年漫画作品。在《周刊少年Jump》1997年34号开始连载。描写了拥有橡皮身体戴草帽的青年路飞，以成为“海贼王”为目标和同伴在大海展开冒险的故事。
+					截止至2013年11月，发行量在全世界突破3.45亿册，是全世界发行量最高的日本漫画。  漫画单行本的翻译版本在日本以外有30个以上的国家和地区出版发行。相关商品在2012年度的市场规模约达1000亿日元。 2012年在第41回日本漫画家协会上获得大赏。
+					2015年6月15日，《ONE PIECE》以日本本土累计发行了3亿2086万6000本，被吉尼斯世界纪录官方认证为“世界上发行量最高的单一作者创作的系列漫画”。
+				</div>
+				<div class="common">
+					草帽海贼团中主人公蒙奇·D·路飞所集结的海贼团，旗帜图案是戴着草帽的骷髅。截止德雷斯罗萨篇后全部成员共九人。旗下还有7队团体组成的“草帽大船团”，分别为俊美海贼团、巴托俱乐部、八宝水军、XXX健身房格斗联合、咚塔塔族咚塔兵团、巨兵海贼团以及约塔玛利亚大船团。
+					从东海进入伟大航路，经过“司法之岛事件”后，名扬天下。至香波地诸岛，全员被熊弹飞分散到世界各地。经由“冥王”雷利的指点，给船员们两年期间各自修炼。之后全员重新聚集于香波地诸岛，进入“新世界”。
+				</div>
+				<div class="common">
+					拥有财富、名声、权力，这世界上的一切的男人 “海贼王”哥尔·D·罗杰，在被行刑受死之前说了一句话，让全世界的人都涌向了大海。“想要我的宝藏吗？如果想要的话，那就到海上去找吧，我全部都放在那里。”，世界开始迎接“大海贼时代”的来临。
+					时值“大海贼时代”，为了寻找传说中海贼王罗杰所留下的大秘宝“ONE PIECE”，无数海贼扬起旗帜，互相争斗。一个叫路飞的少年为了与因救他而断臂的香克斯的约定而出海，在旅途中不断寻找志同道合的伙伴，开始了以成为海贼王为目标的伟大冒险旅程。
+				</div>
+			</div>
+		</div>
+		<!-- 签到 -->
+		<div id="con_left">
+			<p>今天签到了吗？请选择您此刻的<b>心情图片</b>并写下<strong>今天最想说的话</strong>！</p>
+			<ul id="imgs">
+				<li><img src="../picture/kx.gif" alt=""></li>
+				<li><img src="../picture/ng.gif" alt=""></li>
+				<li><img src="../picture/ym.gif" alt=""></li>
+				<li><img src="../picture/wl.gif" alt=""></li>
+				<li><img src="../picture/nu.gif" alt=""></li>
+				<li><img src="../picture/ch.gif" alt=""></li>
+				<li><img src="../picture/fd.gif" alt=""></li>
+				<li><img src="../picture/yl.gif" alt=""></li>
+				<li><img src="../picture/shuai.gif" alt=""></li>
+			</ul>
+			<img id="startSign" src="../picture/qdtb.gif" alt="">
+			<form action="">
+				<label for="speaking">我今天最想说：</label>
+				<input id="speaking" type="text" value="请输入">
+				<span>限制最少3个,最多50个中文字数</span>
+			</form>
+			<h1>签到排行榜</h1>
+			<ul id="sign">
+				<li class="cur">按总天数排列</li>
+				<li>按月天数排列</li>
+				<li>按上次签到时间排列</li>
+				<li>签到等级说明</li>
+			</ul>
+			<div class="datalist">
+				<table cellspacing="0"  class="datatable"><!-- cellpadding="0" -->
+					<thead>
+						<tr class="colplural">
+							<td width="1%"></td>
+							<td width="15%">用户名</td>
+							<td width="10%">总天数</td>
+							<td width="10%">月天数</td>
+							<td width="20%">上次签到时间</td>
+							<td width="15%">目前等级</td>
+							<td width="15%"><nobr>上次奖励[贝里]</nobr></td>
+							<td width="13%">状态</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td><a href="#">我是大大怪</a></td>
+							<td>105</td>
+							<td>9</td>
+							<td>2016-09-08</td>
+							<td>[LV.3]常住居民II</td>
+							<td>1</td>
+							<td class="green">今天已签到</td>
+						</tr>
+						<tr class="colplural">
+							<td align="left" colspan="9">
+								我今天最想说: <img src="../picture/kx.gif"/> 哎...今天够累的，签到来了，日日坚持！
+							 </td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><a href="#">尤文吐司</a></td>
+							<td>191</td>
+							<td>8</td>
+							<td>2016-01-06</td>
+							<td>[LV.7]常住居民III</td>
+							<td>5 </td>
+							<td class="green">今天已签到</td>
+						</tr>
+						<tr class="colplural">
+							<td align="left" colspan="9">
+								我今天最想说: <img src="../picture/wl.gif"/> 哎...今天够累的，签到来了，日日坚持！
+							 </td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><a href="#">sp雷神</a></td>
+							<td>184</td>
+							<td>5</td>
+							<td>2016-07-06</td>
+							<td>[LV.5]常住居民III</td>
+							<td>3 </td>
+							<td class="green">今天已签到</td>
+						</tr>
+						<tr class="colplural">
+							<td align="left" colspan="9">
+								我今天最想说: <img src="../picture/fd.gif"/> 哎...今天够累的，签到来了，日日坚持！
+							 </td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><a href="#">queen1030</a></td>
+							<td>98</td>
+							<td>1</td>
+							<td>2015-08-06</td>
+							<td>[LV.8]常住居民III</td>
+							<td>2 </td>
+							<td class="green">今天已签到</td>
+						</tr>
+						<tr class="colplural">
+							<td align="left" colspan="9">
+								我今天最想说: <img src="../picture/shuai.gif"/> 哎...今天够累的，签到来了，日日坚持！
+							 </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">
+		<p>
+			Powered by <a href="#">OnePiece.cn</a> & WordPress<br>
+			&copy;2011-2014 <a href="#">OnePiece中文网</a>
+		</p>		
+		<div>
+			<a href="#">文字版</a> | <a href="#">小黑屋</a> | <a href="#">OnePiece中文网</a><br>
+			<span></span>
+		</div>
+    </div>
+</body>
+</html>
