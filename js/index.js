@@ -71,7 +71,6 @@ function sortSign(){
         	jiangXu();
         	method = indexli;
         }
-        alert(arr);
         arr = [];
         return;
 	});
