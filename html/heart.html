@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+ 
+<body>
+<p style="text-align:center"><canvas id="canvas1" height="600" width="600"></canvas></p>
+<script type="text/javascript">
+var canvas = document.getElementById("canvas1");
+var ctx = canvas.getContext("2d");
+ctx.translate(300,300); //sets center in the middle of the picture
+drawHeart();
+ 
+function drawHeart() {
+   ctx.beginPath();
+   ctx.moveTo(0,-100);
+   ctx.bezierCurveTo(120,-300, 300,-100, 200,50);
+   ctx.lineTo(0,250);
+   ctx.lineTo(-200,50);
+   ctx.bezierCurveTo(-300,-100, -120,-300, 0,-100);
+   ctx.closePath();
+   ctx.fillStyle="#E25C2F";
+   ctx.fill();
+}
+</script>
+</body>
+</html>
